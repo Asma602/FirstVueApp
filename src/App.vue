@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid p-0">
+
+    <app-navbar></app-navbar>
+<!--    <app-hello-world></app-hello-world>-->
+    <router-view></router-view>
+
+<!--    <h3>Test Input component</h3>-->
+<!--    <h4>{{ message }}</h4>-->
+<!--    <app-input :msg="message" @msgUpdated="message = $event"></app-input>-->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Input from './components/input.vue';
+// import HelloWorld from "@/components/HelloWorld";
+import navbar from "@/components/navbar";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // 'app-input': Input,
+    // 'app-hello-world': HelloWorld,
+    'app-navbar': navbar
+  },
+  data(){
+    return{
+      message: 'Message from parent to child'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body{
+  margin:0
 }
+
 </style>

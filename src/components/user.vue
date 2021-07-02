@@ -79,7 +79,7 @@ export default {
       const index = this.tasks.findIndex(t => t.id === task.id);
       if(index !== -1){
         this.tasks[index].checked = true;
-        document.getElementById(task.id).style.textDecoration ='line-through';
+        // document.getElementById(task.id).style.textDecoration ='line-through';
         localStorage.setItem('tasks', JSON.stringify(this.tasks))
       }
     },

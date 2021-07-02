@@ -34,7 +34,6 @@ export default {
     addNewTask(){
       this.$root.$emit('addTask', this.newTask);  // emitting event using event bus (used for siblings)
       this.newTask = '';
-      console.log(this.newTask);
     }
   }
 }
